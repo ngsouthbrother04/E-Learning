@@ -6,4 +6,6 @@ public class UrlConstant {
     public static final String USER_LOGIN = "api/v1/user/login";
 
     public static final String USER_DELETE = "api/v1/user/{user_id}";
+
+    public static final String USER_SEARCH = "api/v1/user/search";
 }
