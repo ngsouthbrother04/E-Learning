@@ -3,7 +3,7 @@ package src.controller;
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
 import src.dto.reqest.CourseReq;
-import src.dto.response.AddingCourseRes;
+import src.dto.response.CourseRes;
 
 @RestController
 public class CourseController {
@@ -13,7 +13,7 @@ public class CourseController {
             @RequestBody CourseReq req,
             @RequestParam("id") int id)
     {
-        AddingCourseRes res = new AddingCourseRes();
+        CourseRes res = new CourseRes();
 
         res.setName(req.getName());
         res.setDescription(req.getDescription());
@@ -32,7 +32,7 @@ public class CourseController {
 
     @DeleteMapping(UrlConstant.COURSE_DELETE)
     public Object deleteCourse(@PathVariable("course_id") int id, @RequestBody CourseReq req) {
-        AddingCourseRes res = new AddingCourseRes();
+        CourseRes res = new CourseRes();
 
         res.setName(req.getName());
         res.setDescription(req.getDescription());

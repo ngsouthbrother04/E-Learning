@@ -9,12 +9,12 @@ import lombok.experimental.Accessors;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @NoArgsConstructor
 @AllArgsConstructor
-@Accessors(chain = true)
 @SuperBuilder
-public class AddingCourseRes {
+@Accessors(chain = true)
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+public class ChapterRes {
     private String createdDate;
 
     private String updatedDate;
@@ -25,5 +25,5 @@ public class AddingCourseRes {
 
     private String status;
 
-    private int id;
+    private int order;
 }

@@ -1,11 +1,9 @@
 package src.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
 import src.dto.reqest.ChapterReq;
+import src.dto.response.ChapterRes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,4 +17,22 @@ public class ChapterController {
         return req;
     }
 
+    @PutMapping(UrlConstant.CHAPTER_UPDATE)
+    public Object updateChapter(@PathVariable("chapter_id") int chapter_id) {
+        return chapter_id;
+    }
+
+    @DeleteMapping(UrlConstant.CHAPTER_DELETE)
+    public Object deleteChapter(@PathVariable("chapter_id") int chapter_id, @RequestBody ChapterReq req) {
+        ChapterRes res = new ChapterRes();
+
+        res.setName(req.getName());
+        res.setStatus("INACTIVE");
+        res.setDescription(req.getDescription());
+        res.setCreatedDate(req.getCreatedDate());
+        res.setUpdatedDate(req.getUpdatedDate());
+        res.setOrder(req.getOrder());
+
+        return res;
+    }
 }
