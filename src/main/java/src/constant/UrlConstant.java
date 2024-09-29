@@ -9,6 +9,7 @@ public class UrlConstant {
 
     public static final String TEACHER_UPDATE = "api/v1/teacher/update/{teacher_id}";
     public static final String TEACHER_DELETE = "api/v1/teacher/{teacher_id}";
+    public static final String TEACHER_SEARCH = "api/v1/teacher/search";
 
     public static final String COURSE_ADD = "api/v1/course/add";
     public static final String COURSE_UPDATE = "api/v1/course/update/{course_id}";
