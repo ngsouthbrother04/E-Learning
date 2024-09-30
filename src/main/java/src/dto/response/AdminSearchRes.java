@@ -14,7 +14,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @Accessors(chain = true)
 @SuperBuilder
-public class UserSearchRes {
+public class AdminSearchRes {
     private String username;
 
     private String name;

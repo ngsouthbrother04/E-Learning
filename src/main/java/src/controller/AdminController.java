@@ -2,15 +2,15 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.request.UserLoginReq;
-import src.dto.request.UserSearchReq;
-import src.dto.response.UserSearchRes;
+import src.dto.request.AdminLoginReq;
+import src.dto.request.AdminSearchReq;
+import src.dto.response.AdminSearchRes;
 
 @RestController
-public class UserController {
+public class AdminController {
 
     @PostMapping(UrlConstant.USER_LOGIN)
-    public Object login(@RequestBody UserLoginReq req) {
+    public Object login(@RequestBody AdminLoginReq req) {
         return req;
     }
 
@@ -20,12 +20,12 @@ public class UserController {
     }
 
     @PostMapping(UrlConstant.USER_SEARCH)
-    public Object searchUser(@RequestBody UserSearchReq req,
+    public Object searchUser(@RequestBody AdminSearchReq req,
                              @RequestParam("sort") String sort,
                              @RequestParam("size") int size,
                              @RequestParam("page") int page)
     {
-        UserSearchRes res = new UserSearchRes();
+        AdminSearchRes res = new AdminSearchRes();
 
         res.setSort(sort);
         res.setSize(size);
