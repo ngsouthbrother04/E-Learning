@@ -3,9 +3,9 @@ package src.constant;
 public class UrlConstant {
     public UrlConstant() {}
 
-    public static final String USER_LOGIN = "api/v1/user/login";
-    public static final String USER_DELETE = "api/v1/user/{user_id}";
-    public static final String USER_SEARCH = "api/v1/user/search";
+    public static final String ADMIN_LOGIN = "api/v1/user/login";
+    public static final String ADMIN_DELETE = "api/v1/user/{user_id}";
+    public static final String ADMIN_SEARCH = "api/v1/user/search";
 
     public static final String TEACHER_UPDATE = "api/v1/teacher/update/{teacher_id}";
     public static final String TEACHER_DELETE = "api/v1/teacher/{teacher_id}";

@@ -9,17 +9,17 @@ import src.dto.response.AdminSearchRes;
 @RestController
 public class AdminController {
 
-    @PostMapping(UrlConstant.USER_LOGIN)
+    @PostMapping(UrlConstant.ADMIN_LOGIN)
     public Object login(@RequestBody AdminLoginReq req) {
         return req;
     }
 
-    @DeleteMapping(UrlConstant.USER_DELETE)
+    @DeleteMapping(UrlConstant.ADMIN_DELETE)
     public Object deleteUser(@PathVariable("user_id") String user_id) {
         return user_id;
     }
 
-    @PostMapping(UrlConstant.USER_SEARCH)
+    @PostMapping(UrlConstant.ADMIN_SEARCH)
     public Object searchUser(@RequestBody AdminSearchReq req,
                              @RequestParam("sort") String sort,
                              @RequestParam("size") int size,
