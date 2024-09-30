@@ -3,7 +3,11 @@ package src.controller;
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
 import src.dto.reqest.CourseReq;
+import src.dto.reqest.CourseSearchReq;
 import src.dto.response.CourseRes;
+import src.dto.response.CourseSearchRes;
+
+import java.nio.file.Path;
 
 @RestController
 public class CourseController {
@@ -40,6 +44,23 @@ public class CourseController {
         res.setUpdatedDate(req.getUpdatedDate());
         res.setStatus(req.getStatus());
         res.setId(id);
+
+        return res;
+    }
+
+    @PostMapping(UrlConstant.COURSE_SEARCH)
+    public Object searchCourse(@RequestBody CourseSearchReq req, @RequestParam("sort") String sort, @RequestParam("page") int page, @RequestParam("size") int size) {
+        CourseSearchRes res = new CourseSearchRes();
+
+        res.setName(req.getName());
+        res.setCreateDateFrom(req.getCreateDateFrom());
+        res.setCreateDateTo(req.getCreateDateFrom());
+        res.setStatus(req.getStatus());
+        res.setRatingFrom(req.getRatingFrom());
+        res.setRatingTo(req.getRatingTo());
+        res.setSort(sort);
+        res.setPage(page);
+        res.setSize(size);
 
         return res;
     }
