@@ -2,8 +2,8 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.reqest.UserLoginReq;
-import src.dto.reqest.UserSearchReq;
+import src.dto.request.UserLoginReq;
+import src.dto.request.UserSearchReq;
 import src.dto.response.UserSearchRes;
 
 @RestController

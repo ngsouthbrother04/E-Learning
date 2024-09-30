@@ -1,7 +1,6 @@
-package src.dto.reqest;
+package src.dto.request;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,10 +14,18 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Accessors(chain = true)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class UserLoginReq {
+public class CourseSearchReq {
+    private String name;
 
-    private String username;
+    private String status;
 
-    private String password;
+    private String teacherName;
 
+    private String createDateFrom;
+
+    private String createDateTo;
+
+    private int ratingFrom;
+
+    private int ratingTo;
 }

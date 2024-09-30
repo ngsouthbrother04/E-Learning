@@ -2,8 +2,10 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.reqest.ChapterReq;
+import src.dto.request.ChapterReq;
+import src.dto.request.ChapterSearchReq;
 import src.dto.response.ChapterRes;
+import src.dto.response.ChapterSearchRes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,22 @@ public class ChapterController {
         res.setCreatedDate(req.getCreatedDate());
         res.setUpdatedDate(req.getUpdatedDate());
         res.setOrder(req.getOrder());
+
+        return res;
+    }
+
+    @PostMapping(UrlConstant.CHAPTER_SEARCH)
+    public Object searchChapter(@RequestBody ChapterSearchReq req, @RequestParam("sort") String sort, @RequestParam("page") int page, @RequestParam("size") int size) {
+        ChapterSearchRes res = new ChapterSearchRes();
+
+        res.setName(req.getName());
+        res.setStatus(req.getStatus());
+        res.setCourse(req.getCourse());
+        res.setCreateDateFrom(req.getCreateDateFrom());
+        res.setCreateDateTo(req.getCreateDateTo());
+        res.setSort(sort);
+        res.setPage(page);
+        res.setSize(size);
 
         return res;
     }

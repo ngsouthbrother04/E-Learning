@@ -2,7 +2,7 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.reqest.TeacherSearchReq;
+import src.dto.request.TeacherSearchReq;
 import src.dto.response.TeacherSearchRes;
 
 @RestController

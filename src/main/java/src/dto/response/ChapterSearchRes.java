@@ -15,5 +15,19 @@ import lombok.experimental.SuperBuilder;
 @Accessors(chain = true)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class ChapterSearchRes {
+    private String name;
 
+    private String status;
+
+    private String course;
+
+    private String createDateFrom;
+
+    private String createDateTo;
+
+    private String sort;
+
+    private int page;
+
+    private int size;
 }

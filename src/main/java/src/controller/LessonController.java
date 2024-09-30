@@ -2,7 +2,7 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.reqest.LessonReq;
+import src.dto.request.LessonReq;
 import src.dto.response.LessonRes;
 
 import java.util.ArrayList;

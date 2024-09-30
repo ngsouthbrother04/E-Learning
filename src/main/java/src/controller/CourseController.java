@@ -2,12 +2,10 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.reqest.CourseReq;
-import src.dto.reqest.CourseSearchReq;
+import src.dto.request.CourseReq;
+import src.dto.request.CourseSearchReq;
 import src.dto.response.CourseRes;
 import src.dto.response.CourseSearchRes;
-
-import java.nio.file.Path;
 
 @RestController
 public class CourseController {

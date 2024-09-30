@@ -1,4 +1,4 @@
-package src.dto.reqest;
+package src.dto.request;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -14,16 +14,14 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Accessors(chain = true)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class ChapterReq {
-    private String createdDate;
-
-    private String updatedDate;
-
+public class ChapterSearchReq {
     private String name;
-
-    private String description;
 
     private String status;
 
-    private int order;
+    private String course;
+
+    private String createDateFrom;
+
+    private String createDateTo;
 }
