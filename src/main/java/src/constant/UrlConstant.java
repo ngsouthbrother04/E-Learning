@@ -25,4 +25,6 @@ public class UrlConstant {
     public static final String LESSON_UPDATE = "api/v1/lesson/update/{lesson_id}";
     public static final String LESSON_DELETE = "api/v1/lesson/delete/{lesson_id}";
     public static final String LESSON_SEARCH = "api/v1/lesson/search";
+
+    public static final String USER_SIGNUP = "api/v1/user/signup";
 }
