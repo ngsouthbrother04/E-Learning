@@ -3,6 +3,7 @@ package src.controller;
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
 import src.dto.request.user.*;
+import src.dto.response.user.CourseSignedUpRes;
 import src.dto.response.user.UserSignUpCourseRes;
 
 @RestController
@@ -48,4 +49,28 @@ public class UserController {
     public Object userReviewCourse(@RequestBody UserReviewCourseReq req) {
         return req;
     }
+
+    @PostMapping(UrlConstant.USER_SIGNED_UP_COURSE)
+    public Object userSignedUpCourse(@RequestBody CourseSignedUpReq req, @RequestParam("sort") String sort, @RequestParam("page") int page, @RequestParam("size") int size) {
+        CourseSignedUpRes res = new CourseSignedUpRes();
+
+        res.setCourseName(req.getCourseName());
+        res.setStatus(req.getStatus());
+        res.setSize(size);
+        res.setSort(sort);
+        res.setPage(page);
+
+        return res;
+    }
+
+    @PostMapping(UrlConstant.USER_SEARCH_COURSE)
+    public Object searchCourse() {
+        return null;
+    }
+
+    @PostMapping(UrlConstant.USER_PROCESSING_LEARNING_COURSE)
+    public Object userLearningCourse(@RequestBody UserLearnReq req) {
+        return req;
+    }
+
 }

@@ -15,6 +15,7 @@ public class UrlConstant {
     public static final String COURSE_UPDATE = "api/v1/course/update/{course_id}";
     public static final String COURSE_DELETE = "api/v1/course/{course_id}";
     public static final String COURSE_SEARCH = "api/v1/course/search";
+    public static final String COURSE_DETAIL = "api/v1/course/detail/{course_id}";
 
     public static final String CHAPTER_ADD = "api/v1/chapter/add";
     public static final String CHAPTER_UPDATE = "api/v1/chapter/update/{chapter_id}";
@@ -33,4 +34,7 @@ public class UrlConstant {
     public static final String USER_SIGNUP_COURSE = "api/v1/user/course/signup";
     public static final String USER_RATING_COURSE = "api/v1/user/course/rating";
     public static final String USER_REVIEW_COURSE = "api/v1/user/course/comment";
+    public static final String USER_SIGNED_UP_COURSE = "api/v1/user/course/signedup";
+    public static final String USER_SEARCH_COURSE = "api/v1/user/course/search";
+    public static final String USER_PROCESSING_LEARNING_COURSE = "api/v1/user/course/learning";
 }

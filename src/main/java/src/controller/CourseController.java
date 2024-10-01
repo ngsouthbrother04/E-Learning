@@ -4,11 +4,17 @@ import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
 import src.dto.request.CourseReq;
 import src.dto.request.CourseSearchReq;
+import src.dto.request.user.CourseDetailReq;
 import src.dto.response.CourseRes;
 import src.dto.response.CourseSearchRes;
 
 @RestController
 public class CourseController {
+
+    @GetMapping(UrlConstant.COURSE_DETAIL)
+    public Object courseDetail(CourseDetailReq req) {
+        return req;
+    }
 
     @PostMapping(UrlConstant.COURSE_ADD)
     public Object addCourse(
