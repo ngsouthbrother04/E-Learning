@@ -2,9 +2,7 @@ package src.controller;
 
 import org.springframework.web.bind.annotation.*;
 import src.constant.UrlConstant;
-import src.dto.request.user.UserLoginReq;
-import src.dto.request.user.UserSignUpCourseReq;
-import src.dto.request.user.UserSignUpReq;
+import src.dto.request.user.*;
 import src.dto.response.user.UserSignUpCourseRes;
 
 @RestController
@@ -39,5 +37,15 @@ public class UserController {
         res.setStatus("...");
 
         return res;
+    }
+
+    @PostMapping(UrlConstant.USER_RATING_COURSE)
+    public Object userRatingCourse(@RequestBody UserRatingCourseReq req) {
+        return req;
+    }
+
+    @PostMapping(UrlConstant.USER_REVIEW_COURSE)
+    public Object userReviewCourse(@RequestBody UserReviewCourseReq req) {
+        return req;
     }
 }

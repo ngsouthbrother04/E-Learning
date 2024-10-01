@@ -32,5 +32,5 @@ public class UrlConstant {
     public static final String USER_DELETE = "api/v1/user/{user_id}";
     public static final String USER_SIGNUP_COURSE = "api/v1/user/course/signup";
     public static final String USER_RATING_COURSE = "api/v1/user/course/rating";
-    public static final String USER_COMMENT_COURSE = "api/v1/user/course/comment";
+    public static final String USER_REVIEW_COURSE = "api/v1/user/course/comment";
 }

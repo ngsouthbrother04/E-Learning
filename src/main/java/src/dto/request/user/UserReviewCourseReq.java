@@ -14,8 +14,8 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Accessors(chain = true)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class UserRatingCourseReq {
+public class UserReviewCourseReq {
     private int userId;
     private int courseId;
-    private int rating;
+    private String review;
 }
